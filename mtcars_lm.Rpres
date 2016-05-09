@@ -1,0 +1,47 @@
+An easy way to run regression with the mtcars data set
+========================================================
+author: Patrick Cronin
+date: 5/8/2016
+
+Regression for Novices
+========================================================
+This web interface allows users to run linear regression on the
+R mtcars data set and has the following advantages
+
+- Web enabled
+- No need to download R
+- No need to program in R
+- No need to program at all!!!
+
+Running regression is hard if you can't code
+========================================================
+The code looks scary if you can't code
+
+```{r,echo=TRUE,results="hide"}
+data("mtcars")
+modelFit = lm(mpg ~ cyl + disp+ wt,data = mtcars)
+summary(modelFit)
+```
+
+Novices may react
+- What does this mean
+- I'm scared
+- I'll never learn statistics :(
+
+But results can be meaningful
+========================================================
+
+```{r,echo=FALSE}
+data("mtcars")
+modelFit = lm(mpg ~ cyl + disp+ wt,data = mtcars)
+summary(modelFit)
+```
+
+If only we can simpliy the input
+========================================================
+
+- Easy check boxes!
+- Simplified results!!
+- Easy novices into Statistics!!!
+
+https://pcronin170.shinyapps.io/project/
